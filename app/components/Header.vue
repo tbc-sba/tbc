@@ -18,9 +18,11 @@
       <h1 class="text-2xl sm:text-3xl font-bold text-text-light dark:text-text-dark">
         متوسطة الطيب ابراهيم شريفة
       </h1>
+      <!--
       <p class="text-muted mt-1 max-w-md">
         الصفحة الرسمية لمتوسطة الطيب إبراهيم شريفة، لغرز العلم لترقى القيم، ونبني مستقبلا مشرقا
       </p>
+      -->
     </section>
   </header>
 </template>
