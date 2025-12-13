@@ -7,18 +7,24 @@ defineProps<{
 
 <template>
   <article class="rounded-lg shadow-sm text-right relative">
-    <p class="absolute bottom-4 end-4 text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-md z-10">{{
-        date
-      }}</p>
-    <Carousel>
+    <p
+      class="absolute bottom-4 end-4 text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-md z-10"
+    >{{ date }}</p>
+    <Carousel :opts="{
+      loop: true,
+      direction: 'rtl'
+    }">
       <CarouselContent>
         <CarouselItem v-for="(image, index) in images">
-          <img :src="useAsset(image)" :alt="`Weekly Letter Image ${index + 1}`"
-               class="aspect-video w-full rounded-t-lg object-cover">
+          <img
+            :src="useAsset(image)"
+            :alt="`Weekly Letter Image ${index + 1}`"
+            class="aspect-video w-full rounded-t-lg object-cover"
+          />
         </CarouselItem>
       </CarouselContent>
-      <CarouselPrevious v-if="images.length > 1" variant="outline"/>
-      <CarouselNext v-if="images.length > 1" variant="outline"/>
+      <CarouselPrevious v-if="images.length > 1" variant="outline" />
+      <CarouselNext v-if="images.length > 1" variant="outline" />
     </Carousel>
   </article>
 </template>
